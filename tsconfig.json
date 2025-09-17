@@ -30,7 +30,7 @@
     "**/*.tsx",
     "next-env.d.ts",
     ".next/types/**/*.ts"
-  ],
+, "hooks/.hooks/useActiveSection.tsx"  ],
   "exclude": [
     "node_modules"
   ]
