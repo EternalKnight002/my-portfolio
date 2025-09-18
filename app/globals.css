@@ -19,3 +19,175 @@ body {
 .container {
   @apply max-w-5xl mx-auto;
 }
+
+/* ---------- Horizontal marquee for Skills ---------- */
+
+/* marquee animation moves left by 50% because we duplicate content */
+@keyframes marquee-left {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+/* marquee wrapper masks overflow */
+.marquee {
+  position: relative;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  cursor: grab;
+  user-select: none; /* Prevent text selection while dragging */
+}
+
+/* When dragging */
+.marquee.dragging {
+  cursor: grabbing;
+}
+
+/* Hide scrollbar completely */
+.marquee::-webkit-scrollbar {
+  display: none;
+}
+
+.marquee {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* the track contains two copies of content to allow seamless loop */
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  will-change: transform;
+  animation: marquee-left 18s linear infinite;
+}
+
+/* duplicated content container */
+.marquee-content {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+/* skill pill base styles */
+.skill-pill {
+  padding: 0.6rem 1rem;
+  border-radius: 9999px;
+  background: #f8fafc; /* light neutral */
+  border: 2px solid rgba(15, 23, 42, 0.06);
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  pointer-events: none; /* Prevent individual skill clicks during drag */
+}
+
+/* Re-enable pointer events when not dragging */
+.marquee:not(.dragging) .skill-pill {
+  pointer-events: auto;
+}
+
+/* Colorful hover borders for different skills */
+.skill-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Java - Orange/Red gradient border */
+.skill-pill[data-skill="Java"]:hover {
+  border-color: #f97316;
+  background: linear-gradient(135deg, #fff7ed, #ffedd5);
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+}
+
+/* Go - Cyan border */
+.skill-pill[data-skill="Go"]:hover {
+  border-color: #06b6d4;
+  background: linear-gradient(135deg, #ecfeff, #cffafe);
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
+}
+
+/* React - Blue border */
+.skill-pill[data-skill="React"]:hover {
+  border-color: #3b82f6;
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Next.js - Purple border */
+.skill-pill[data-skill="Next.js"]:hover {
+  border-color: #8b5cf6;
+  background: linear-gradient(135deg, #f5f3ff, #ede9fe);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+/* Spring Boot - Green border */
+.skill-pill[data-skill="Spring Boot"]:hover {
+  border-color: #10b981;
+  background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+/* Docker - Blue/Teal border */
+.skill-pill[data-skill="Docker"]:hover {
+  border-color: #0ea5e9;
+  background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+}
+
+/* Kubernetes - Indigo border */
+.skill-pill[data-skill="Kubernetes"]:hover {
+  border-color: #6366f1;
+  background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+/* PostgreSQL - Blue/Purple border */
+.skill-pill[data-skill="PostgreSQL"]:hover {
+  border-color: #7c3aed;
+  background: linear-gradient(135deg, #faf5ff, #f3e8ff);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+/* keyboard focus visible */
+.skill-pill:focus {
+  outline: 3px solid rgba(79,70,229,0.15); /* soft indigo focus ring */
+  outline-offset: 2px;
+  border-color: rgba(79,70,229,0.35);
+}
+
+/* Add a subtle gradient animation for extra flair */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.skill-pill:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+  border-radius: inherit;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+  
+  .skill-pill {
+    transition: none;
+  }
+  
+  .skill-pill:hover::before {
+    animation: none;
+  }
+}
