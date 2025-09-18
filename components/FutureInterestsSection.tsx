@@ -12,6 +12,7 @@ import {
   Grid as BlockchainIcon,
   Headphones as VrIcon,
   X,
+  LucideProps,
 } from "lucide-react";
 
 type Node = {
@@ -19,7 +20,7 @@ type Node = {
   name: string;
   left: number; // percentage (desktop layout)
   top: number; // percentage (desktop layout)
-  Icon: (props: any) => JSX.Element;
+  Icon: React.ComponentType<LucideProps>;
   details: string[];
 };
 
@@ -113,7 +114,7 @@ export default function FutureInterestsSection() {
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-semibold text-gray-900">Future Interests</h2>
         <p className="mt-3 text-gray-600 max-w-2xl">
-          Emerging technologies I’m exploring and planning to work with.
+          Emerging technologies I&apos;m exploring and planning to work with.
         </p>
 
         {/* ---------- DESKTOP NETWORK (md+) ---------- */}
@@ -145,7 +146,7 @@ export default function FutureInterestsSection() {
             </defs>
 
             {/* connectors as smooth cubic curves with subtle moving stroke */}
-            {CONNECTORS.map(([a, b], i) => {
+            {CONNECTORS.map(([a, b]) => {
               const n1 = byId(a);
               const n2 = byId(b);
               const x1 = n1.left;
@@ -284,7 +285,7 @@ export default function FutureInterestsSection() {
                   <Dialog.Title className="text-xl font-semibold text-gray-900">
                     {active?.name}
                   </Dialog.Title>
-                  <p className="mt-2 text-sm text-gray-600">Why I’m exploring this and practical goals.</p>
+                  <p className="mt-2 text-sm text-gray-600">Why I&apos;m exploring this and practical goals.</p>
                 </div>
 
                 <button onClick={() => setActive(null)} className="p-2 rounded hover:bg-gray-100">

@@ -1,6 +1,6 @@
 // components/SkillsSection.tsx
 'use client'
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useRef, useState } from 'react'
 import { skills } from '../data/skills'
 
 export default function SkillsSection() {

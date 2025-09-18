@@ -2,7 +2,7 @@
 'use client'
 
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+// import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import useActiveSection from '../hooks/.hooks/useActiveSection'
 import { Fragment } from 'react'
@@ -17,7 +17,7 @@ const NAV_ITEMS = [
 ]
 
 export default function Nav() {
-  const pathname = usePathname() || '/'
+  // const pathname = usePathname() || '/'
   const active = useActiveSection(NAV_ITEMS.map((n) => n.id))
   const [open, setOpen] = useState(false)
 
