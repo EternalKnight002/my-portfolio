@@ -11,7 +11,8 @@ import { Dialog, Transition } from '@headlessui/react'
 const NAV_ITEMS = [
   { id: 'skills', label: 'Skills' },
   { id: 'projects', label: 'Projects' },
-  { id: 'exploring', label: 'Exploring' },
+  { id: 'interests', label: 'Interests' },
+
   { id: 'contact', label: 'Contact' }
 ]
 
@@ -41,19 +42,15 @@ export default function Nav() {
               </a>
             ))}
             {/* <a
-              href="/resume.pdf"
+              href="/public/resume.pdf"
               download
               className="ml-4 inline-block px-3 py-1 rounded border text-sm text-gray-700 hover:bg-gray-50"
             >
               Resume
             </a> */}
-              <a
-                  href="/resume.pdf"
-                  download
-                  className="ml-4 inline-block px-3 py-1 rounded border text-sm text-gray-700 hover:bg-gray-50 shimmer-hover"
-                >
-                  Resume
-              </a>
+             <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="ml-4 inline-block px-3 py-1 rounded border text-sm text-gray-700 hover:bg-gray-50"
+            >Resume</a>
+
 
 
 

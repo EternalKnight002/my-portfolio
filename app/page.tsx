@@ -1,9 +1,9 @@
 import Hero from '../components/Hero'
 import SkillsSection from '../components/SkillsSection'
 import ProjectsSection from '../components/ProjectsSection'
-import ExploringSection from '../components/ExploringSection'
 import ContactSection from '../components/ContactSection'
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import FutureInterestsSection from '../components/FutureInterestsSection'
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
       <main id="main">
         <SkillsSection />
         <ProjectsSection />
-        <ExploringSection />
+        <FutureInterestsSection />
         <ContactSection />
       </main>
     </div>
