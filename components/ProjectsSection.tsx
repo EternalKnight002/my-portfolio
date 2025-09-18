@@ -1,42 +1,63 @@
 // components/ProjectsSection.tsx
-'use client'
-import { motion } from 'framer-motion'
-import { projects } from '../data/projects'
-import Image from 'next/image'
+"use client";
+
+import { motion } from "framer-motion";
+import { projects } from "../data/projects";
+import ProjectCard from "./ProjectCard";
 
 export default function ProjectsSection() {
   return (
     <section id="projects" className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-semibold">Selected Projects</h2>
-        <p className="mt-3 text-gray-600 max-w-2xl">Case studies & links to code or live demos.</p>
+        <p className="mt-3 text-gray-600 max-w-2xl">
+          Case studies, future ideas, and links to code or live demos.
+        </p>
 
-        <div className="mt-8 grid gap-6 sm:grid-cols-2">
+        {/* <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((p) => (
-            <motion.a
+            <motion.div
               key={p.slug}
-              href={p.href ?? '#'}
-              target="_blank"
-              rel="noreferrer"
-              initial={{ y: 8, opacity: 0 }}
+              initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
-              className="block p-6 bg-white border rounded-lg hover:shadow-md transition"
+              transition={{ duration: 0.4 }}
             >
-              <div className="flex items-start justify-between">
-                <h3 className="text-lg font-semibold">{p.title}</h3>
-                <div className="text-sm text-gray-500">{p.tech.join(' • ')}</div>
-              </div>
-              <p className="mt-3 text-gray-600 text-sm">{p.description}</p>
-              <div className="mt-4 flex gap-2 flex-wrap">
-                {p.tech.map((t) => (
-                  <span key={t} className="text-xs px-2 py-1 bg-gray-100 rounded">{t}</span>
-                ))}
-              </div>
-            </motion.a>
+              <ProjectCard {...p} />
+            </motion.div>
           ))}
-        </div>
+        </div> */}
+        {/* <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 items-stretch">
+            {projects.map((p) => (
+               <motion.div
+                  key={p.slug}
+                  initial={{ y: 20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4 }}
+                  className="h-full"
+                  >
+                  <ProjectCard {...p} />
+                </motion.div>
+                 ))}
+          </div> */}
+          <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 items-stretch">
+  {projects.map((p) => (
+    <motion.div
+      key={p.slug}
+      initial={{ y: 20, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4 }}
+      className="h-full"
+    >
+      <ProjectCard {...p} />
+    </motion.div>
+  ))}
+</div>
+
+
       </div>
     </section>
-  )
+  );
 }

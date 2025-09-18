@@ -40,13 +40,23 @@ export default function Nav() {
                 {item.label}
               </a>
             ))}
-            <a
+            {/* <a
               href="/resume.pdf"
               download
               className="ml-4 inline-block px-3 py-1 rounded border text-sm text-gray-700 hover:bg-gray-50"
             >
               Resume
-            </a>
+            </a> */}
+              <a
+                  href="/resume.pdf"
+                  download
+                  className="ml-4 inline-block px-3 py-1 rounded border text-sm text-gray-700 hover:bg-gray-50 shimmer-hover"
+                >
+                  Resume
+              </a>
+
+
+
           </nav>
 
           {/* Mobile button */}

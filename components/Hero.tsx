@@ -15,8 +15,22 @@ export default function Hero() {
         </motion.p>
 
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.28 }} className="mt-8 flex gap-3">
-          <a href="#projects" className="px-5 py-2 rounded-lg bg-indigo-600 text-white">View Projects</a>
-          <a href="#contact" className="px-5 py-2 rounded-lg border text-gray-700">Contact</a>
+          {/* <a href="#projects" className="px-5 py-2 rounded-lg bg-indigo-600 text-white">View Projects</a>
+          <a href="#contact" className="px-5 py-2 rounded-lg border text-gray-700">Contact</a> */}
+          <a
+              href="#projects"
+              className="px-5 py-2 rounded-lg bg-indigo-600 text-white shimmer-hover"
+            >
+              View Projects
+          </a>
+          <a
+              href="#contact"
+              className="px-5 py-2 rounded-lg border text-gray-700 shimmer-hover"
+            >
+              Contact
+          </a>
+
+
         </motion.div>
       </div>
     </section>
