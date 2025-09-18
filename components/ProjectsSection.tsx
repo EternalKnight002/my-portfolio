@@ -42,19 +42,19 @@ export default function ProjectsSection() {
                  ))}
           </div> */}
           <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 items-stretch">
-  {projects.map((p) => (
-    <motion.div
-      key={p.slug}
-      initial={{ y: 20, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.4 }}
-      className="h-full"
-    >
-      <ProjectCard {...p} />
-    </motion.div>
-  ))}
-</div>
+              {projects.map((p) => (
+              <motion.div
+            key={p.slug}
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+           viewport={{ once: true }}
+            transition={{ duration: 0.4 }}
+            className="h-full"
+              >
+              <ProjectCard {...p} />
+              </motion.div>
+                ))}
+            </div>
 
 
       </div>

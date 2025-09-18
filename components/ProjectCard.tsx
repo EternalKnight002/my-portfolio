@@ -46,7 +46,7 @@ export default function ProjectCard({
       )}
 
       {/* Project image */}
-      {/* <div className="relative w-full h-40 overflow-hidden bg-gray-50">
+      <div className="relative w-full h-40 overflow-hidden bg-gray-50">
         {isLoading && (
           <div className="absolute inset-0 z-10">
             <div className="h-full w-full animate-pulse bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200" />
@@ -62,7 +62,7 @@ export default function ProjectCard({
           } ${comingSoon ? "brightness-90" : ""}`}
           onLoad={() => setIsLoading(false)}
         />
-      </div> */}
+      </div>
         {/* Project image */}
         {/* Project image (16:9) with group hover zoom */}
 <div className="relative w-full aspect-video overflow-hidden bg-gray-50 group">
