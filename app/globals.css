@@ -59,7 +59,7 @@ body {
   align-items: center;
   gap: 0.75rem;
   will-change: transform;
-  animation: marquee-left 18s linear infinite;
+  animation: marquee-left 14s linear infinite;
 }
 
 /* duplicated content container */
