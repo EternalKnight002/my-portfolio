@@ -121,7 +121,7 @@ export default function Nav() {
                   ))}
 
                   <a
-                    href="/resume.pdf"
+                    href="/Aman_Kumar_Resume.docx"
                     download
                     className="mt-4 inline-block px-3 py-2 rounded border text-sm text-gray-700 hover:bg-gray-50"
                     onClick={() => setOpen(false)}
