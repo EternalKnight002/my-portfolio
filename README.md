@@ -39,20 +39,6 @@ Built with **Next.js 15**, **React**, **Tailwind CSS**, and deployed on **Vercel
 - **Languages:** TypeScript, JavaScript  
 
 ---
-
-## 📸 Screenshots
-
-### Hero Section
-![Hero Screenshot](./assets/screenshots/hero.png)
-
-### Skills Marquee
-![Skills Screenshot](./assets/screenshots/skills.png)
-
-### Projects
-![Projects Screenshot](./assets/screenshots/projects.png)
-
----
-
 ## 🚀 Getting Started
 
 ### 1. Clone the repo
