@@ -111,7 +111,7 @@ export default function ProjectCard({
           <div className="mt-4 flex gap-3">
             {demo && (
               <a
-                href={demo}
+                href={"https://my-portfolio-iota-taupe-96.vercel.app/"}
                 target="_blank"
                 rel="noreferrer"
                 className="text-sm px-3 py-1 rounded bg-indigo-600 text-white hover:bg-indigo-700 transition shimmer-hover"
