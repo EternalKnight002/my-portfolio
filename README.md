@@ -106,7 +106,7 @@ This project is deployed with **Vercel**.
 **Aman Kumar**
 
 * 💼 [LinkedIn](https://www.linkedin.com/in/aman-kumar-537a73296/)
-* 💼 [x]("https://x.com/Eternalknigh")
+* 💼 [x](https://x.com/Eternalknigh)
 * 💻 [GitHub](https://github.com/EternalKnight002)
 * ✉️ [Email](mailto:resoamankumar@gmail.com)
 
