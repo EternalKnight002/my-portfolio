@@ -35,6 +35,7 @@ body {
   overflow-x: auto;
   overflow-y: hidden;
   cursor: grab;
+  -webkit-user-select: none; /* Add for Safari/iOS support */
   user-select: none; /* Prevent text selection while dragging */
 }
 
