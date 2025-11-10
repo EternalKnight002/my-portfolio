@@ -3,6 +3,7 @@ import './globals.css'
 import { ReactNode } from 'react'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
+import Script from "next/script";
 
 export const metadata = {
   title: 'Aman Kumar — Full Stack Developer',
@@ -18,6 +19,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <main className="flex-1">{children}</main>
           <Footer />
         </div>
+        <Script
+          src="/oneko/oneko.js"
+          data-cat="/oneko/oneko.gif"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   )
