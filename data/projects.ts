@@ -19,7 +19,7 @@ export const projects: Project[] = [
     description:
       "All-in-one productivity platform for students with task management, note-taking, Pomodoro timer, and academic calendar integration.",
     tech: ["React", "Node.js", "MongoDB", "Express.js", "TailwindCSS"],
-    image: "/projects/student-productivity-app.png",
+    image: "/projects/Student_productivity.jpg",
     demo: "https://student-productivity-app-landing-pa.vercel.app/",
     source: "https://github.com/EternalKnight002/student-productivity-app",
   },
@@ -38,7 +38,7 @@ export const projects: Project[] = [
     description:
       "Curated showcase of Chrome and VS Code extensions I've built. Browse, explore, and discover productivity tools for developers.",
     tech: ["Next.js", "React", "TailwindCSS", "TypeScript", "Chrome API"],
-    image: "/projects/extension-marketplace.png",
+    image: "/projects/extension.png",
     demo: "https://extension-marketplace-pink.vercel.app/",
     source: "https://github.com/EternalKnight002/extension-marketplace",
   },
