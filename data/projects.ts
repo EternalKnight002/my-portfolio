@@ -19,7 +19,7 @@ export const projects: Project[] = [
     description:
       "All-in-one productivity platform for students with task management, note-taking, Pomodoro timer, and academic calendar integration.",
     tech: ["React", "Node.js", "MongoDB", "Express.js", "TailwindCSS"],
-    image: "/projects/Student_productivity.jpg",
+    image: "/projects/Student_productivity.png",
     demo: "https://student-productivity-app-landing-pa.vercel.app/",
     source: "https://github.com/EternalKnight002/student-productivity-app",
   },
