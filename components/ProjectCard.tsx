@@ -45,48 +45,27 @@ export default function ProjectCard({
         </div>
       )}
 
-      {/* Project image */}
-      <div className="relative w-full h-40 overflow-hidden bg-gray-50">
+      {/* Project image (16:9) with group hover zoom */}
+      <div className="relative w-full aspect-video overflow-hidden bg-gray-50 group">
         {isLoading && (
           <div className="absolute inset-0 z-10">
             <div className="h-full w-full animate-pulse bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200" />
           </div>
         )}
-        <Image
-          src={image}
-          alt={title}
-          fill
-          sizes="(max-width: 768px) 100vw, 33vw"
-          className={`object-cover transition-opacity duration-500 z-0 ${
-            isLoading ? "opacity-0" : "opacity-100"
-          } ${comingSoon ? "brightness-90" : ""}`}
-          onLoad={() => setIsLoading(false)}
-        />
+
+        <div className={`absolute inset-0 transition-transform duration-500 ${isLoading ? '' : 'group-hover:scale-105'}`}>
+          <Image
+            src={image}
+            alt={title}
+            fill
+            sizes="(max-width: 768px) 100vw, 33vw"
+            className={`object-cover object-center transition-opacity duration-500 z-0 ${
+              isLoading ? "opacity-0" : "opacity-100"
+            } ${comingSoon ? "brightness-90" : ""}`}
+            onLoad={() => setIsLoading(false)}
+          />
+        </div>
       </div>
-        {/* Project image */}
-        {/* Project image (16:9) with group hover zoom */}
-<div className="relative w-full aspect-video overflow-hidden bg-gray-50 group">
-  {isLoading && (
-    <div className="absolute inset-0 z-10">
-      <div className="h-full w-full animate-pulse bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200" />
-    </div>
-  )}
-
-  <div className={`absolute inset-0 transition-transform duration-500 ${isLoading ? '' : 'group-hover:scale-105'}`}>
-    <Image
-      src={image}
-      alt={title}
-      fill
-      sizes="(max-width: 768px) 100vw, 33vw"
-      className={`object-cover object-center transition-opacity duration-500 z-0 ${
-        isLoading ? "opacity-0" : "opacity-100"
-      } ${comingSoon ? "brightness-90" : ""}`}
-      onLoad={() => setIsLoading(false)}
-    />
-  </div>
-</div>
-
-
 
       {/* Content (flex-grow ensures consistent height) */}
       <div className="flex flex-col flex-1 p-5 justify-between">
@@ -111,7 +90,7 @@ export default function ProjectCard({
           <div className="mt-4 flex gap-3">
             {demo && (
               <a
-                href={"https://my-portfolio-iota-taupe-96.vercel.app/"}
+                href={demo}
                 target="_blank"
                 rel="noreferrer"
                 className="text-sm px-3 py-1 rounded bg-indigo-600 text-white hover:bg-indigo-700 transition shimmer-hover"
